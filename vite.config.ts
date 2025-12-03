@@ -1,8 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [react()],
-  // 👇 IMPORTANT for GitHub Pages
-  base: '/iiit-campus-helper/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  // 👇 Set base to '/' for Vercel (root-hosted), or keep '/iiit-campus-helper/' for GitHub Pages
+  base: '/',
 })
