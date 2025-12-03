@@ -12,6 +12,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  // 👇 Set base to '/' for Vercel (root-hosted), or keep '/iiit-campus-helper/' for GitHub Pages
-  base: '/',
+  // 👇 Set base to '/iiit-campus-helper/' for GitHub Pages
+  base: '/iiit-campus-helper/',
 })
